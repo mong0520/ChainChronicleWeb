@@ -1,9 +1,21 @@
+APP=chainchronicle-web
+PORT=80
+
 build:
-	@docker build . -t cc-web
+	@docker build . -t ${APP}
 
-run:
-	@docker run --rm --name cc-web -d -p 8000:80 cc-web
-	@echo "http://localhost:8000/web" 
+up:
+	@docker run --rm --name ${APP} -e PORT=${PORT} -d -p 8000:80 ${APP}
+	@echo "http://localhost:8000" 
 
-stop:
-	@docker stop cc-web
+down:
+	@docker stop ${APP}
+
+release:
+	@docker tag ${APP} mong0520/${APP}
+	@docker push mong0520/${APP}
+
+deploy:
+	@heroku container:push ${APP}
+	@heroku container:release ${APP}
+	@heroku open
