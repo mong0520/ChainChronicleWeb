@@ -16,6 +16,6 @@ release:
 	@docker push mong0520/${APP}
 
 deploy:
-	@heroku container:push ${APP}
-	@heroku container:release ${APP}
+	@heroku container:push web
+	@heroku container:release web
 	@heroku open
