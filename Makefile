@@ -11,11 +11,11 @@ up:
 down:
 	@docker stop ${APP}
 
-release:
+push:
 	@docker tag ${APP} mong0520/${APP}
 	@docker push mong0520/${APP}
-
-deploy:
 	@heroku container:push web
+
+release:
 	@heroku container:release web
 	@heroku open
