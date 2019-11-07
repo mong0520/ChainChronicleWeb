@@ -18,7 +18,7 @@
                 <input type="text" id="uid" value="iOS7069F115-D7DC-48F3-8658-04191F4AA949">
                 <button type="button" @click="login" class="button">登入</button>
                 <button type="button" @click="statuz" class="button" data-reveal-id="myModal">查狀態</button>
-                <button type="button" class="button" data-reveal-id="info">看公告</button>                
+                <!-- <button type="button" class="button" data-reveal-id="info">看公告</button>                 -->
                 <div id="myModal" class="reveal-modal xlarge" data-reveal>
                     <pre><code>{{msg}}</code></pre>
                     <a class="close-reveal-modal">&times;</a>
@@ -147,7 +147,7 @@
                 </div>
 
 
-                <input type="text" id="queryText" value="挑戰者的" placeholder="查點東西">                
+                <input type="text" id="queryText" value="" placeholder="查點東西">                
                 <button type="button" @click="queryQuest" class="button" data-reveal-id="questModel">查關卡</button>                
                 <button type="button" @click="queryChar" class="button" data-reveal-id="charModel">查卡牌</button>
                 <p></p>
@@ -158,7 +158,6 @@
                     一鍵系列
                 </label>
                 <button type="button" @click="queryUzu" class="button" data-reveal-id="uzuModel">深淵之禍</button>
-                <button type="button" disabled="disabled" @click="queryUzu" class="button" data-reveal-id="uzuModel">深淵之禍</button>
 
                 <hr>
                 <!-- <div class="row collapse prefix-radius">
