@@ -123,18 +123,16 @@
                         <thead>
                             <tr>
                                 <th>封面</th>
-                                <th>Info</th>                                
                             </tr>
                         </thead>
                         <tbody>
                             <tr v-for="(result, index) in resultGachaInfo">
-                                <td><img :src="result.banner_url"></td>
-                                <td>
+                                <td><img :src="result.banner_url">
                                     <template v-for="(item, index) in result.gacha_info">
                                         <br>
                                         <code>id: {{item.GachaID}}</code>
                                         <button id=questInfo type="button" @click="gacha(item.GachaID, item.GachaCount)" class="button tiny">用{{item.ItemName}}轉{{item.GachaCount}}次</button>                            
-                                    </template>                                    
+                                    </template>    
                                 </td>                                
                             </tr>
                         </tbody>
