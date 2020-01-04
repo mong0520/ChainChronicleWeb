@@ -33,16 +33,16 @@
                     <table>
                         <thead>
                             <tr>
-                                <!-- <th>類型</th> -->
-                                <!-- <th>編號</th> -->
+                                <th>類型</th>
+                                <th>編號</th>
                                 <th>名稱</th>
                                 <th>動作</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr v-for="(result, index) in resultQuest">
-                                <!-- <td>{{ result.QuestType }}</td> -->
-                                <!-- <td>{{ result.QuestID }}</td> -->
+                                <td>{{ result.QuestType }}</td>
+                                <td>{{ result.QuestID }}</td>
                                 <td>{{ result.Name }}</td>
                                 <td><button id=questInfo type="button" @click="playQuest(result.QuestType, result.QuestID)" class="button tiny" >Play!</button></td>
                             </tr>
