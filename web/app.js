@@ -1,6 +1,6 @@
 // ./app.js
 
-var host = "http://nt1.me:5000"
+var host = "https://chainchronicle-api.herokuapp.com"
 
 function getCook(cookiename) {
     // Get name followed by anything except a semicolon
